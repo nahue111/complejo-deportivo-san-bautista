@@ -197,7 +197,7 @@ export default function Sports() {
       {/* Section header */}
       <div className="max-w-[1400px] mx-auto px-8 md:px-14 pt-24 pb-14">
         <span className="text-brand-sky text-xs font-semibold tracking-[0.2em] uppercase">
-          Disciplinas
+          Deportes
         </span>
         <h2 className="mt-3 text-4xl md:text-5xl font-black tracking-tighter text-white leading-tight">
           Todo en un<br />solo lugar.
