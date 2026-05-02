@@ -39,25 +39,37 @@ const sports = [
     id: 'voley',
     num: '03',
     name: 'Vóley',
-    tag: '1 cancha · arena fina',
-    desc: 'Cancha de vóley playa con arena fina de primer nivel. Torneos internos todos los fines de semana, abiertos para cualquier nivel.',
-    features: ['Arena fina oficial', 'Torneos semanales', 'Apta para beach vóley'],
+    tag: '1 cancha · piso reglamentario',
+    desc: 'Cancha de vóley con piso reglamentario de primer nivel. Torneos internos todos los fines de semana, abiertos para cualquier nivel.',
+    features: ['Piso reglamentario oficial', 'Torneos semanales', 'Iluminación nocturna'],
     img: '/voley.jpg',
     imgSide: 'left',
     accent: 'brand-gold',
     bg: '#0C0C0E',
   },
   {
-    id: 'eventos',
+    id: 'futbol11',
     num: '04',
+    name: 'Fútbol 11',
+    tag: '1 cancha · campo reglamentario',
+    desc: 'Cancha de fútbol 11 con dimensiones reglamentarias, ideal para partidos completos, torneos y entrenamientos de equipo a nivel competitivo.',
+    features: ['Campo reglamentario', 'Iluminación LED nocturna', 'Arcos y líneas oficiales'],
+    img: '/futbol11.jpg',
+    imgSide: 'right',
+    accent: 'brand-red',
+    bg: '#09090B',
+  },
+  {
+    id: 'eventos',
+    num: '05',
     name: 'Eventos',
     tag: 'Salón · capacidad completa',
     desc: 'Nuestro salón de eventos es el espacio ideal para celebraciones, reuniones corporativas y fiestas privadas. Equipado para que tu evento sea memorable.',
     features: ['Capacidad para grupos grandes', 'Cocina y parrilla equipada', 'Estacionamiento propio'],
     img: '/cancha2.jpg',
-    imgSide: 'right',
+    imgSide: 'left',
     accent: 'brand-sky',
-    bg: '#09090B',
+    bg: '#0C0C0E',
   },
 ]
 
@@ -156,7 +168,9 @@ function SportRow({ sport, index }) {
 
       {/* CTA */}
       <a
-        href="#contacto"
+        href={`https://wa.me/59898884897?text=${encodeURIComponent(sport.id === 'eventos' ? 'Hola, quiero consultar disponibilidad para el salón de eventos.' : `Hola, quiero reservar una cancha de ${sport.name}.`)}`}
+        target="_blank"
+        rel="noopener noreferrer"
         className="group w-fit flex items-center gap-2.5 text-white font-bold text-sm border border-white/12 hover:border-white/30 px-6 py-3 rounded-full transition-all duration-200"
       >
         {sport.id === 'eventos' ? 'Consultar disponibilidad' : `Reservar ${sport.name}`}

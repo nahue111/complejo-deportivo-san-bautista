@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react'
 // Cancha de fútbol real del complejo
 const FIELD_IMG = '/cancha1.jpg'
 
-const SPORTS = ['Pádel', 'Fútbol', 'Vóley', 'Eventos']
+const SPORTS = ['Pádel', 'Fútbol', 'Fútbol 11', 'Vóley', 'Eventos']
 
 export default function Hero() {
   const panelRef = useRef(null)
@@ -49,25 +49,8 @@ export default function Hero() {
           bg-[#09090B]
         "
       >
-        {/* Logo row */}
-        <div className="hp-el flex items-center gap-3 md:pt-20">
-          <img
-            src="/logo-complejo.png"
-            alt="San Bautista"
-            className="w-11 h-11 rounded-full object-contain flex-shrink-0"
-          />
-          <div className="leading-none">
-            <p className="text-white/40 text-[10px] font-semibold uppercase tracking-[0.18em]">
-              Complejo Deportivo
-            </p>
-            <p className="text-white font-black text-sm tracking-tight mt-0.5">
-              San Bautista
-            </p>
-          </div>
-        </div>
-
         {/* Main content */}
-        <div className="flex flex-col gap-6 py-10 md:py-0">
+        <div className="flex flex-col gap-6 py-10 md:py-0 md:pt-20">
           {/* Red accent bar */}
           <div className="hp-el w-10 h-[3px] bg-brand-red rounded-full" />
 
@@ -96,7 +79,7 @@ export default function Hero() {
 
           {/* Subtext */}
           <p className="hp-el text-white/40 text-sm leading-relaxed max-w-[38ch]">
-            7 canchas iluminadas, salón de eventos y más.
+            4 canchas iluminadas, salón de eventos y más.
             Abiertos los 7 días de la semana.
           </p>
 
@@ -119,7 +102,7 @@ export default function Hero() {
         {/* Stats strip */}
         <div className="hp-el flex items-center gap-0 divide-x divide-white/[0.08] border-t border-white/[0.07] pt-7 md:pb-16">
           {[
-            { v: '7',  l: 'Canchas' },
+            { v: '4',  l: 'Canchas' },
             { v: '4',  l: 'Disciplinas' },
             { v: '7',  l: 'Días / sem.' },
           ].map(s => (

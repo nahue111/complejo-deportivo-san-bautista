@@ -13,12 +13,12 @@ gsap.registerPlugin(ScrollTrigger)
 
 // UPDATE: Replace with real contact info
 const CONTACT = {
-  whatsapp: 'https://wa.me/5491100000000',
-  whatsappDisplay: '+54 9 11 XXXX-XXXX',
+  whatsapp: 'https://wa.me/59898884897',
+  whatsappDisplay: '098 884 897',
   instagram: 'https://instagram.com/complejosanbautista',
   instagramDisplay: '@complejosanbautista',
   address: 'Av. San Martín 1234, San Bautista, Buenos Aires',
-  phone: '+54 11 XXXX-XXXX',
+  phone: '098 884 897',
 }
 
 const hours = [

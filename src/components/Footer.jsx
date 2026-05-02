@@ -2,7 +2,7 @@ import { Instagram, MessageCircle } from 'lucide-react'
 
 // UPDATE: Replace with real links
 const SOCIAL = {
-  whatsapp:  'https://wa.me/5491100000000',
+  whatsapp:  'https://wa.me/59898884897',
   instagram: 'https://instagram.com/complejosanbautista',
 }
 
@@ -83,7 +83,7 @@ export default function Footer() {
             <p className="text-white/30 text-[10px] font-semibold uppercase tracking-widest mb-3">
               Deportes
             </p>
-            {['Pádel', 'Fútbol', 'Vóley', 'Eventos'].map(d => (
+            {['Pádel', 'Fútbol', 'Fútbol 11', 'Vóley', 'Eventos'].map(d => (
               <a
                 key={d}
                 href="#deportes"

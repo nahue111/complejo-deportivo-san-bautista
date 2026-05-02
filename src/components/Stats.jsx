@@ -6,9 +6,9 @@ import { Lightbulb, CalendarCheck, ShieldCheck, Clock4 } from 'lucide-react'
 gsap.registerPlugin(ScrollTrigger)
 
 const counters = [
-  { target: 7,   suffix: '',   label: 'Canchas' },
-  { target: 800, suffix: '+',  label: 'Jugadores activos' },
-  { target: 10,  suffix: '',   label: 'Años de trayectoria' },
+  { target: 4,   suffix: '',   label: 'Canchas' },
+  { target: 150, suffix: '+',  label: 'Jugadores activos' },
+  { target: 3,   suffix: '',   label: 'Años de trayectoria' },
   { target: 15,  suffix: 'hs', label: 'De atención diaria' },
 ]
 
