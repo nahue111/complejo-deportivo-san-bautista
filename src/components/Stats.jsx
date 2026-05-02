@@ -70,7 +70,7 @@ export default function Stats() {
               >
                 0{c.suffix}
               </span>
-              <span className="text-white/55 text-xs font-semibold uppercase tracking-widest mt-1">
+              <span className="text-white/78 text-xs font-semibold uppercase tracking-widest mt-1">
                 {c.label}
               </span>
             </div>
@@ -91,7 +91,7 @@ export default function Stats() {
               </div>
               <div>
                 <p className="font-bold text-white text-sm">{title}</p>
-                <p className="text-white/38 text-xs mt-1 leading-relaxed">{sub}</p>
+                <p className="text-white/62 text-xs mt-1 leading-relaxed">{sub}</p>
               </div>
             </div>
           ))}

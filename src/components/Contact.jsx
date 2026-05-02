@@ -89,11 +89,11 @@ export default function Contact() {
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-white font-bold text-base tracking-tight">Escribinos por WhatsApp</p>
-                <p className="text-white/40 text-sm mt-0.5">{CONTACT.whatsappDisplay}</p>
+                <p className="text-white/65 text-sm mt-0.5">{CONTACT.whatsappDisplay}</p>
               </div>
               <div className="flex-shrink-0 w-9 h-9 rounded-full border border-white/10 group-hover:border-brand-red/40 flex items-center justify-center transition-colors">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M2.5 7H11.5M7.5 3L11.5 7L7.5 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/50 group-hover:text-brand-red transition-colors"/>
+                  <path d="M2.5 7H11.5M7.5 3L11.5 7L7.5 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/72 group-hover:text-brand-red transition-colors"/>
                 </svg>
               </div>
             </a>
@@ -110,7 +110,7 @@ export default function Contact() {
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-white font-bold text-base tracking-tight">Seguinos en Instagram</p>
-                <p className="text-white/40 text-sm mt-0.5">{CONTACT.instagramDisplay}</p>
+                <p className="text-white/65 text-sm mt-0.5">{CONTACT.instagramDisplay}</p>
               </div>
             </a>
 
@@ -121,7 +121,7 @@ export default function Contact() {
                   <MapPin size={16} className="text-brand-sky" />
                 </div>
                 <div>
-                  <p className="text-white/35 text-xs uppercase tracking-widest font-semibold mb-0.5">Dirección</p>
+                  <p className="text-white/82 text-xs uppercase tracking-widest font-semibold mb-0.5">Dirección</p>
                   <p className="text-white/80 text-sm">{CONTACT.address}</p>
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function Contact() {
                   <Phone size={16} className="text-brand-sky" />
                 </div>
                 <div>
-                  <p className="text-white/35 text-xs uppercase tracking-widest font-semibold mb-0.5">Teléfono</p>
+                  <p className="text-white/82 text-xs uppercase tracking-widest font-semibold mb-0.5">Teléfono</p>
                   <p className="text-white/80 text-sm">{CONTACT.phone}</p>
                 </div>
               </div>
@@ -151,7 +151,7 @@ export default function Contact() {
               <div className="flex flex-col divide-y divide-white/[0.06]">
                 {hours.map((h, i) => (
                   <div key={i} className="flex justify-between items-center py-3.5">
-                    <span className="text-white/55 text-sm">{h.day}</span>
+                    <span className="text-white/78 text-sm">{h.day}</span>
                     <span className="text-white font-semibold text-sm tabular-nums">{h.time}</span>
                   </div>
                 ))}
@@ -160,7 +160,7 @@ export default function Contact() {
 
             {/* How to book */}
             <div>
-              <p className="text-white/35 text-xs uppercase tracking-widest font-semibold mb-5">
+              <p className="text-white/82 text-xs uppercase tracking-widest font-semibold mb-5">
                 Cómo reservar
               </p>
               <div className="flex flex-col gap-4">
@@ -169,7 +169,7 @@ export default function Contact() {
                     <span className="text-brand-red font-black text-xs tabular-nums mt-0.5 flex-shrink-0 w-6">
                       {s.n}
                     </span>
-                    <p className="text-white/60 text-sm leading-relaxed">{s.text}</p>
+                    <p className="text-white/82 text-sm leading-relaxed">{s.text}</p>
                   </div>
                 ))}
               </div>

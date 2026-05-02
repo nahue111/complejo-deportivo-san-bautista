@@ -66,8 +66,8 @@ export default function Hero() {
               <span
                 key={s}
                 className="
-                  border border-white/[0.12] text-white/50
-                  text-xs font-semibold px-4 py-1.5 rounded-full
+                  border border-white/[0.12] text-white/72
+                  text-[10px] font-semibold px-3 py-1 rounded-full
                   hover:border-brand-red/60 hover:text-white
                   transition-all duration-200 cursor-default
                 "
@@ -78,7 +78,7 @@ export default function Hero() {
           </div>
 
           {/* Subtext */}
-          <p className="hp-el text-white/40 text-sm leading-relaxed max-w-[38ch]">
+          <p className="hp-el text-white/65 text-sm leading-relaxed max-w-[38ch]">
             4 canchas iluminadas, salón de eventos y más.
             Abiertos los 7 días de la semana.
           </p>
@@ -104,13 +104,13 @@ export default function Hero() {
           {[
             { v: '4',  l: 'Canchas' },
             { v: '4',  l: 'Disciplinas' },
-            { v: '7',  l: 'Días / sem.' },
+            { v: '7',  l: 'Días/sem.' },
           ].map(s => (
-            <div key={s.l} className="flex flex-col gap-1 pr-8 pl-0 first:pl-0 [&:not(:first-child)]:pl-8">
+            <div key={s.l} className="flex flex-col gap-1 pr-5 md:pr-8 pl-0 first:pl-0 [&:not(:first-child)]:pl-5 md:[&:not(:first-child)]:pl-8">
               <span className="text-[2rem] font-black text-white tracking-tighter leading-none">
                 {s.v}
               </span>
-              <span className="text-[9px] font-bold text-white/28 uppercase tracking-[0.18em]">
+              <span className="text-[9px] font-bold text-white/52 uppercase tracking-[0.18em] whitespace-nowrap">
                 {s.l}
               </span>
             </div>
@@ -142,14 +142,9 @@ export default function Hero() {
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse block" />
             <span className="text-white text-xs font-bold">Abierto ahora</span>
           </div>
-          <p className="text-white/40 text-[10px] mt-0.5 pl-4">Hasta las 23:00 hs</p>
+          <p className="text-white/65 text-[10px] mt-0.5 pl-4">Hasta las 23:00 hs</p>
         </div>
 
-        {/* Sport count badge */}
-        <div className="hp-badge absolute bottom-8 right-6 md:bottom-12 md:right-10 bg-brand-red rounded-2xl px-5 py-3">
-          <p className="text-white/70 text-[10px] font-semibold uppercase tracking-widest">Deportes</p>
-          <p className="text-white font-black text-xl tracking-tight leading-none mt-0.5">3 en 1</p>
-        </div>
       </div>
     </section>
   )

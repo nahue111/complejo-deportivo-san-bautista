@@ -29,13 +29,13 @@ export default function Footer() {
                 className="w-10 h-10 rounded-full object-contain"
               />
               <div className="flex flex-col leading-none">
-                <span className="text-white/40 text-[10px] font-semibold uppercase tracking-widest">
+                <span className="text-white/65 text-[10px] font-semibold uppercase tracking-widest">
                   Complejo Deportivo
                 </span>
                 <span className="text-white font-black text-base tracking-tight">San Bautista</span>
               </div>
             </div>
-            <p className="text-white/35 text-sm leading-relaxed">
+            <p className="text-white/82 text-sm leading-relaxed">
               Fútbol, pádel y vóley en un mismo lugar. Canchas iluminadas y
               reservas sin complicaciones.
             </p>
@@ -48,7 +48,7 @@ export default function Footer() {
                 className="w-9 h-9 rounded-full border border-white/10 hover:border-white/25 flex items-center justify-center transition-colors duration-200"
                 aria-label="WhatsApp"
               >
-                <MessageCircle size={15} className="text-white/50 hover:text-white" />
+                <MessageCircle size={15} className="text-white/72 hover:text-white" />
               </a>
               <a
                 href={SOCIAL.instagram}
@@ -57,21 +57,21 @@ export default function Footer() {
                 className="w-9 h-9 rounded-full border border-white/10 hover:border-white/25 flex items-center justify-center transition-colors duration-200"
                 aria-label="Instagram"
               >
-                <Instagram size={15} className="text-white/50 hover:text-white" />
+                <Instagram size={15} className="text-white/72 hover:text-white" />
               </a>
             </div>
           </div>
 
           {/* Nav */}
           <div className="flex flex-col gap-1">
-            <p className="text-white/30 text-[10px] font-semibold uppercase tracking-widest mb-3">
+            <p className="text-white/78 text-[10px] font-semibold uppercase tracking-widest mb-3">
               Navegación
             </p>
             {navLinks.map(l => (
               <a
                 key={l.href}
                 href={l.href}
-                className="text-white/50 hover:text-white text-sm py-1.5 transition-colors duration-200"
+                className="text-white/72 hover:text-white text-sm py-1.5 transition-colors duration-200"
               >
                 {l.label}
               </a>
@@ -80,14 +80,14 @@ export default function Footer() {
 
           {/* Deportes */}
           <div className="flex flex-col gap-1">
-            <p className="text-white/30 text-[10px] font-semibold uppercase tracking-widest mb-3">
+            <p className="text-white/78 text-[10px] font-semibold uppercase tracking-widest mb-3">
               Deportes
             </p>
             {['Pádel', 'Fútbol', 'Fútbol 11', 'Vóley', 'Eventos'].map(d => (
               <a
                 key={d}
                 href="#deportes"
-                className="text-white/50 hover:text-white text-sm py-1.5 transition-colors duration-200"
+                className="text-white/72 hover:text-white text-sm py-1.5 transition-colors duration-200"
               >
                 {d}
               </a>
@@ -97,12 +97,12 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-8 border-t border-white/[0.06]">
-          <p className="text-white/25 text-xs">
+          <p className="text-white/72 text-xs">
             &copy; {year} Complejo Deportivo San Bautista. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-1.5">
             <div className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse" />
-            <span className="text-white/25 text-xs">San Bautista, Buenos Aires</span>
+            <span className="text-white/72 text-xs">San Bautista, Buenos Aires</span>
           </div>
         </div>
       </div>

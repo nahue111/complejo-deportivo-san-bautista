@@ -9,7 +9,7 @@ const links = [
 ]
 
 // UPDATE: Replace with real WhatsApp number
-const WA_LINK = 'https://wa.me/5491100000000'
+const WA_LINK = 'https://wa.me/59898884897'
 
 export default function Navbar() {
   const wrapRef = useRef(null)
@@ -46,8 +46,8 @@ export default function Navbar() {
             alt="San Bautista"
             className="w-9 h-9 rounded-full object-contain"
           />
-          <div className="hidden sm:flex flex-col leading-none">
-            <span className="text-white/60 font-medium text-[10px] tracking-widest uppercase">
+          <div className="flex flex-col leading-none">
+            <span className="text-white/82 font-medium text-[10px] tracking-widest uppercase">
               Complejo Deportivo
             </span>
             <span className="text-white font-black text-sm tracking-tight">
@@ -62,7 +62,7 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-white/55 hover:text-white text-sm font-medium transition-colors duration-200"
+              className="text-white/78 hover:text-white text-sm font-medium transition-colors duration-200"
             >
               {l.label}
             </a>

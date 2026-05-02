@@ -132,7 +132,7 @@ function SportRow({ sport, index }) {
           {sport.num}
         </span>
         <div className="h-px flex-1 max-w-[2rem]" style={{ backgroundColor: accentColor }} />
-        <span className="text-white/35 text-[10px] font-semibold uppercase tracking-widest">
+        <span className="text-white/82 text-[10px] font-semibold uppercase tracking-widest">
           {sport.tag}
         </span>
       </div>
@@ -152,14 +152,14 @@ function SportRow({ sport, index }) {
       )}
 
       {/* Description */}
-      <p className="text-white/45 text-sm leading-relaxed max-w-[42ch]">
+      <p className="text-white/68 text-sm leading-relaxed max-w-[42ch]">
         {sport.desc}
       </p>
 
       {/* Features */}
       <ul className="flex flex-col gap-2">
         {sport.features.map(f => (
-          <li key={f} className="flex items-center gap-3 text-sm text-white/60">
+          <li key={f} className="flex items-center gap-3 text-sm text-white/82">
             <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor: accentColor }} />
             {f}
           </li>
