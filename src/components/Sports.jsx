@@ -111,13 +111,6 @@ function SportRow({ sport, index }) {
         className="sr-img absolute inset-0 w-full h-full object-cover"
         style={sport.imgPosition ? { objectPosition: sport.imgPosition } : undefined}
       />
-      {/* Number watermark */}
-      <span
-        className="absolute bottom-5 right-7 font-black text-[5rem] md:text-[7rem] leading-none select-none pointer-events-none"
-        style={{ color: `${accentColor}18` }}
-      >
-        {sport.num}
-      </span>
     </div>
   )
 
