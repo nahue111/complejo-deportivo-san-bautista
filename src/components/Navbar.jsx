@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Sun, Moon } from 'lucide-react'
+import { useTheme } from '../hooks/useTheme'
 
 const links = [
   { href: '#deportes',      label: 'Deportes' },
@@ -8,10 +9,10 @@ const links = [
   { href: '#contacto',      label: 'Contacto' },
 ]
 
-// UPDATE: Replace with real WhatsApp number
 const WA_LINK = 'https://wa.me/59898884897'
 
 export default function Navbar() {
+  const { dark: isDark, toggle: onToggleTheme } = useTheme()
   const wrapRef = useRef(null)
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen]         = useState(false)
@@ -22,7 +23,6 @@ export default function Navbar() {
       { y: -90, opacity: 0 },
       { y: 0, opacity: 1, duration: 1.2, ease: 'power4.out', delay: 0.9 }
     )
-
     const onScroll = () => setScrolled(window.scrollY > 55)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -39,38 +39,30 @@ export default function Navbar() {
             : 'bg-transparent border border-transparent',
         ].join(' ')}
       >
-        {/* Brand */}
         <a href="#" className="flex items-center gap-2.5">
-          <img
-            src="/logo-complejo.png"
-            alt="San Bautista"
-            className="w-9 h-9 rounded-full object-contain"
-          />
+          <img src="/logo-complejo.png" alt="San Bautista" className="w-9 h-9 rounded-full object-contain" />
           <div className="flex flex-col leading-none">
-            <span className="text-white/82 font-medium text-[10px] tracking-widest uppercase">
-              Complejo Deportivo
-            </span>
-            <span className="text-white font-black text-sm tracking-tight">
-              San Bautista
-            </span>
+            <span className="text-white/65 font-medium text-[10px] tracking-widest uppercase">Complejo Deportivo</span>
+            <span className="text-white font-black text-sm tracking-tight">San Bautista</span>
           </div>
         </a>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-7">
           {links.map(l => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-white/78 hover:text-white text-sm font-medium transition-colors duration-200"
-            >
+            <a key={l.href} href={l.href} className="text-white/78 hover:text-white text-sm font-medium transition-colors duration-200">
               {l.label}
             </a>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={onToggleTheme}
+            className="w-9 h-9 rounded-full border border-white/[0.15] flex items-center justify-center text-white/65 hover:text-white hover:border-white/30 transition-all duration-200"
+            aria-label="Cambiar tema"
+          >
+            {isDark ? <Sun size={15} /> : <Moon size={15} />}
+          </button>
           <a
             href={WA_LINK}
             target="_blank"
@@ -89,32 +81,21 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile drawer */}
-      <div
-        className={[
-          'md:hidden max-w-5xl mx-auto mt-2 rounded-3xl',
-          'bg-[#0D0303]/95 backdrop-blur-2xl border border-white/[0.07]',
-          'overflow-hidden transition-all duration-300',
-          open ? 'max-h-80 opacity-100 px-5 pt-5 pb-5' : 'max-h-0 opacity-0 px-5 pt-0 pb-0',
-        ].join(' ')}
-      >
+      <div className={[
+        'md:hidden max-w-5xl mx-auto mt-2 rounded-3xl',
+        'bg-[#0D0303]/95 backdrop-blur-2xl border border-white/[0.07]',
+        'overflow-hidden transition-all duration-300',
+        open ? 'max-h-80 opacity-100 px-5 pt-5 pb-5' : 'max-h-0 opacity-0 px-5 pt-0 pb-0',
+      ].join(' ')}>
         <div className="flex flex-col gap-3">
           {links.map(l => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="text-white/65 hover:text-white text-base font-medium py-1 border-b border-white/5 last:border-0 transition-colors"
-            >
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)}
+              className="text-white/65 hover:text-white text-base font-medium py-1 border-b border-white/5 last:border-0 transition-colors">
               {l.label}
             </a>
           ))}
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-brand-red text-white text-sm font-bold px-5 py-3.5 rounded-full text-center mt-2 transition-colors hover:bg-brand-red-hover"
-          >
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
+            className="bg-brand-red text-white text-sm font-bold px-5 py-3.5 rounded-full text-center mt-2 transition-colors hover:bg-brand-red-hover">
             Reservar por WhatsApp
           </a>
         </div>

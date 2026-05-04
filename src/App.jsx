@@ -17,7 +17,7 @@ export default function App() {
   }, [])
 
   return (
-    <div className="bg-brand-dark">
+    <>
       <Navbar />
       <Hero />
       <Sports />
@@ -25,6 +25,6 @@ export default function App() {
       <Gallery />
       <Contact />
       <Footer />
-    </div>
+    </>
   )
 }
